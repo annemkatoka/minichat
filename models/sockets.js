@@ -11,7 +11,7 @@ class Sockets {
     
             socket.on('mensaje', ( data ) => {
                 console.log(data);
-                socket.emit('mensaje-bienvenida', data);
+                this.io.emit('mensaje-bienvenida', data);
             })
          });
     }
